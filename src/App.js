@@ -38,26 +38,10 @@ function App() {
       console.log("**********getUserPortfolio",res,res?.data);
       setUserPortfolio(res?.data);
     });
-
-    const exchanges = data?.exchanges;
-    const stocks = data?.stocks;
-    const userPortfolio = data?.portfolio;
-    const recommendations = data?.recommendations;
-
-    return {
-      exchanges,
-      stocks,
-      userPortfolio,
-      recommendations
-    };
   };
 
   useEffect(() => {
-    const { exchanges, stocks, userPortfolio, recommendations } = getData();
-    setExchanges(exchanges);
-    setStocks(stocks);
-    setUserPortfolio(userPortfolio);
-    setRecommendations(recommendations);
+    getData();
   }, []);
 
   return (
