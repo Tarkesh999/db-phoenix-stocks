@@ -5,12 +5,21 @@ import data from "./data";
 
 import Dashboard from "./pages/Dashboard/Dashboard";
 import StockView from "./pages/StockView/StockView";
+import axios from 'axios';
 
 function App() {
   const [exchanges, setExchanges] = useState([]);
   const [stocks, setStocks] = useState([]);
+  const [userPortfolio,setUserPortfolio] = useState([]);
 
   const getData = () => {
+    axios({
+      url: "",
+      method: "GET"
+    }).then((res) => {
+      console.log("**********getUserPortfolio",res,res?.data);
+      setUserPortfolio(res);
+    });
     const exchanges = data.exchanges;
     const stocks = data.stocks;
 
