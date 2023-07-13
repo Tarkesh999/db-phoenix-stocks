@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/static/css/main.6d49620f.css",
+    "main.js": "/static/js/main.6755c4d5.js",
+    "static/media/genie_lamp.png": "/static/media/genie_lamp.64a083fcd8d5782b73d9.png",
+    "static/media/NeutrifPro-Medium.otf": "/static/media/NeutrifPro-Medium.e077da3cb9537c11c921.otf",
+    "static/media/NeutrifPro-Regular.otf": "/static/media/NeutrifPro-Regular.9aac43a2029f3d69d782.otf",
+    "static/media/NeutrifPro-Bold.otf": "/static/media/NeutrifPro-Bold.573f2f5d556d39e2d5d3.otf",
+    "static/media/NeutrifPro-Light.otf": "/static/media/NeutrifPro-Light.9e2b6aee0b283816c929.otf",
+    "static/media/piggy-bank.svg": "/static/media/piggy-bank.c013e4ede7526da214e22f7a99e38be2.svg",
+    "static/media/globe.svg": "/static/media/globe.2ed84d46eee1c40032daccf3161e909c.svg",
+    "static/media/coins.svg": "/static/media/coins.6c05731ffd35df88a21e40ecc05269da.svg",
+    "index.html": "/index.html",
+    "static/media/chart-line-down.svg": "/static/media/chart-line-down.38d988d4589eac4ea291255257347e38.svg",
+    "static/media/chart-line.svg": "/static/media/chart-line.09f0795327d187980d8052f4f973364a.svg",
+    "static/media/star.svg": "/static/media/star.e083c176f3488f7188cec67b73afe654.svg",
+    "static/media/flask.svg": "/static/media/flask.d65e7dc99c49617a1b15e0d68c676caf.svg",
+    "static/media/chart-pie-alt.svg": "/static/media/chart-pie-alt.327b72aa2acaecda24bc2246e85a0370.svg",
+    "static/media/chevron-down.svg": "/static/media/chevron-down.bc2137723848e2215404c0b69c468c7c.svg",
+    "main.6d49620f.css.map": "/static/css/main.6d49620f.css.map",
+    "main.6755c4d5.js.map": "/static/js/main.6755c4d5.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.6d49620f.css",
+    "static/js/main.6755c4d5.js"
+  ]
+}
