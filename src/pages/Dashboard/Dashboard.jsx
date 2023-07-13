@@ -15,8 +15,9 @@ import { getTopFiveDividendStocks, getInfoCardData } from "./helpers";
 
 import styles from "./Dashboard.module.css";
 import { Modal } from "../../components/modal/Modal";
+import RecommendationCard from "../../components/recommendations/RecommendationCard";
 
-const Dashboard = ({ portfolio,exchanges, stocks, setStocks }) => {
+const Dashboard = ({ portfolio, exchanges, recommendations, stocks, setStocks }) => {
   
   const [modalShow, setModalShow] = useState(false);
 
@@ -32,7 +33,10 @@ const Dashboard = ({ portfolio,exchanges, stocks, setStocks }) => {
     <div style={{position: "relative", zIndex: 0}} >
       <div style={{position:"fixed",bottom: 60, right: 40, cursor:"pointer", zIndex: 100}}>
         <img alt="genie-lamp" src={logo} width={140} height={90} onClick={imgOnClick} />
-        <Modal show={modalShow} handleClose={modalClose}><p>Modalll!!!!!!!!!</p></Modal>
+        <Modal show={modalShow} handleClose={modalClose}>
+          {/* <ExchangeList exchanges={exchanges} /> */}
+          <RecommendationCard recommendations={recommendations}/>
+        </Modal>
       </div>
       <Header />
       <Subheader>

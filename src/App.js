@@ -11,31 +11,53 @@ function App() {
   const [exchanges, setExchanges] = useState([]);
   const [stocks, setStocks] = useState([]);
   const [userPortfolio,setUserPortfolio] = useState([]);
+  const [recommendations, setRecommendations] = useState([]);
 
   const getData = () => {
-    // axios({
-    //   url: "",
-    //   method: "GET"
-    // }).then((res) => {
-    //   console.log("**********getUserPortfolio",res,res?.data);
-    //   setUserPortfolio(res);
-    // });
-    const exchanges = data.exchanges;
-    const stocks = data.stocks;
-    const userPortfolio = data.portfolio;
+    axios({
+      method: 'get',
+      url: `https://stock-recommendation-4pctc4z25q-uc.a.run.app/getRecommendations`,
+      withCredentials: false
+    }).then((res) => {
+      console.log("**********getUserPortfolio",res,res?.data);
+      setRecommendations(res?.data);
+    });
+    axios({
+      method: 'get',
+      url: `https://stock-recommendation-4pctc4z25q-uc.a.run.app/getAllStocks`,
+      withCredentials: false
+    }).then((res) => {
+      console.log("**********getUserstocks",res,res?.data);
+      setStocks(res?.data);
+    });
+    axios({
+      method: 'get',
+      url: `https://stock-recommendation-4pctc4z25q-uc.a.run.app/getUserPortfolio`,
+      withCredentials: false
+    }).then((res) => {
+      console.log("**********getUserPortfolio",res,res?.data);
+      setUserPortfolio(res?.data);
+    });
+
+    const exchanges = data?.exchanges;
+    const stocks = data?.stocks;
+    const userPortfolio = data?.portfolio;
+    const recommendations = data?.recommendations;
 
     return {
       exchanges,
       stocks,
-      userPortfolio
+      userPortfolio,
+      recommendations
     };
   };
 
   useEffect(() => {
-    const { exchanges, stocks, userPortfolio } = getData();
+    const { exchanges, stocks, userPortfolio, recommendations } = getData();
     setExchanges(exchanges);
     setStocks(stocks);
     setUserPortfolio(userPortfolio);
+    setRecommendations(recommendations);
   }, []);
 
   return (
@@ -49,6 +71,7 @@ function App() {
             <Dashboard
               exchanges={exchanges}
               portfolio={userPortfolio}
+              recommendations={recommendations}
               stocks={stocks}
               setStocks={setStocks}
               {...props}

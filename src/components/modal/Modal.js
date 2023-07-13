@@ -6,8 +6,8 @@ export const Modal = ({ handleClose, show, children }) => {
   return (
     <div className={showHideClassName}>
       <section className="modal-main">
-        {children}
-        <button type="button" onClick={handleClose}>
+        <div style={{display:"flex", justifyContent:"center"}}>{children}</div>
+        <button type="button" onClick={handleClose} style={{left:100}}>
           Close
         </button>
       </section>

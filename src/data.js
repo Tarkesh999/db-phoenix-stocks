@@ -1,4 +1,18 @@
 const data = {
+  recommendations: [
+    {
+      "stockId": "123",
+      "stockName":"abc",
+      "reason": "some random reason",
+      "rank": "1"
+  },
+  {
+      "stockId": "345",
+      "stockName":"vbkfd",
+      "reason": "some reason randomly given part 2",
+      "rank": "2"
+  }
+  ],
   portfolio:[
     {
       name: "Twitter",

@@ -1,0 +1,54 @@
+.container {
+    position:relative;
+    padding: 8px;
+    color: var(--dark-grey);
+    border: "30px solid red" ;
+    border-color: black;
+  }
+  
+  .header {
+    font-size: 0.85rem;
+  }
+  
+  .exchangeList {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .listItem {
+    display: flex;
+    margin: 10px 0;
+    position: relative;
+  }
+  
+  .name {
+    width: 150px;
+  }
+  
+  .index {
+    width: 100px;
+    color: var(--dark-grey);
+  }
+  
+  .percentage {
+    color: var(--dark-grey);
+  }
+  
+  .dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: var(--dark-grey);
+    position: absolute;
+    left: -22px;
+    top: 4px;
+  }
+  
+.sell {
+  color: red
+}
+
+.buy {
+  color: green
+}
