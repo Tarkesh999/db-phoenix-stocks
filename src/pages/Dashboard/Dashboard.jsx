@@ -14,7 +14,7 @@ import logo from "../../assets/icons/genie_lamp.png"
 import { getTopFiveDividendStocks, getInfoCardData } from "./helpers";
 
 import styles from "./Dashboard.module.css";
-import { Modal } from "../../components/modal/Modal";
+// import { Modal } from "../../components/modal/Modal";
 
 const Dashboard = ({ exchanges, stocks, setStocks }) => {
   
@@ -30,10 +30,10 @@ const Dashboard = ({ exchanges, stocks, setStocks }) => {
 
   return (
     <div style={{position: "relative", zIndex: 0}} >
-      <div style={{position:"fixed",bottom: 60, right: 40, cursor:"pointer", zIndex: 100}}>
+      {/* <div style={{position:"fixed",bottom: 60, right: 40, cursor:"pointer", zIndex: 100}}>
         <img alt="genie-lamp" src={logo} width={140} height={90} onClick={imgOnClick} />
         <Modal show={modalShow} handleClose={modalClose}><p>Modalll!!!!!!!!!</p></Modal>
-      </div>
+      </div> */}
       <Header />
       <Subheader>
         <ExchangeList exchanges={exchanges} />
