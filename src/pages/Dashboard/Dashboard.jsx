@@ -16,7 +16,7 @@ import { getTopFiveDividendStocks, getInfoCardData } from "./helpers";
 import styles from "./Dashboard.module.css";
 import { Modal } from "../../components/modal/Modal";
 
-const Dashboard = ({ exchanges, stocks, setStocks }) => {
+const Dashboard = ({ portfolio,exchanges, stocks, setStocks }) => {
   
   const [modalShow, setModalShow] = useState(false);
 
@@ -54,18 +54,17 @@ const Dashboard = ({ exchanges, stocks, setStocks }) => {
           />
         </div>
       </Subheader>
-
       <Layout>
         <ConditionallyRender
           ifTrue={stocks.length}
-          show={<StockList stocks={stocks} setStocks={setStocks} />}
+          show={
+          <PortfolioList portfolio={portfolio} />}
         />
       </Layout>
       <Layout>
         <ConditionallyRender
           ifTrue={stocks.length}
-          show={
-          <PortfolioList stocks={stocks} setStocks={setStocks} />}
+          show={<StockList stocks={stocks} setStocks={setStocks} />}
         />
       </Layout>
     </div>

@@ -13,27 +13,29 @@ function App() {
   const [userPortfolio,setUserPortfolio] = useState([]);
 
   const getData = () => {
-    axios({
-      url: "",
-      method: "GET"
-    }).then((res) => {
-      console.log("**********getUserPortfolio",res,res?.data);
-      setUserPortfolio(res);
-    });
+    // axios({
+    //   url: "",
+    //   method: "GET"
+    // }).then((res) => {
+    //   console.log("**********getUserPortfolio",res,res?.data);
+    //   setUserPortfolio(res);
+    // });
     const exchanges = data.exchanges;
     const stocks = data.stocks;
+    const userPortfolio = data.portfolio;
 
     return {
       exchanges,
       stocks,
+      userPortfolio
     };
   };
 
   useEffect(() => {
-    const { exchanges, stocks } = getData();
-
+    const { exchanges, stocks, userPortfolio } = getData();
     setExchanges(exchanges);
     setStocks(stocks);
+    setUserPortfolio(userPortfolio);
   }, []);
 
   return (
@@ -46,6 +48,7 @@ function App() {
             <div>
             <Dashboard
               exchanges={exchanges}
+              portfolio={userPortfolio}
               stocks={stocks}
               setStocks={setStocks}
               {...props}

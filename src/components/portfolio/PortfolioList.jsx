@@ -1,68 +1,23 @@
 import React, { useEffect } from "react";
 
-import Select from "../Select/Select";
-import StockListItem from "./PortfolioListItem/PortfolioListItem";
+import PortfolioListItem from "./PortfolioListItem/PortfolioListItem";
 
-import {
-  sortStocksByDividendYield,
-  sortStocksByCompoundedYield,
-} from "../../helpers";
 
 import styles from "./PortfolioList.module.css";
 
-const StockList = ({ stocks, setStocks }) => {
-  useEffect(() => {
-    setStocksByDividendYieldCurrentYear();
-  }, []);
-
+const PortfolioList = ({ portfolio }) => {
+  console.log("****protfolio",portfolio)
   const renderListItems = () => {
-    return stocks.map((stock) => (
-      <StockListItem stock={stock} key={stock.ticker} />
+    return portfolio.map((portfolio) => (
+      <PortfolioListItem portfolio={portfolio} key={portfolio?.ticker} />
     ));
   };
 
-  const getOptions = () => {
-    return [
-      {
-        displayValue: "Highest dividend yield 2020",
-        value: "dividendyieldcurrentyear",
-      },
-      {
-        displayValue: "Highest dividend yield overall",
-        value: "dividendyieldoverall",
-      },
-    ];
-  };
-
-  const setStocksByDividendYieldOverall = () => {
-    const sorted = sortStocksByCompoundedYield(stocks);
-    setStocks(sorted);
-  };
-
-  const setStocksByDividendYieldCurrentYear = () => {
-    const sorted = sortStocksByDividendYield(stocks);
-    setStocks(sorted);
-  };
-
-  const onSelectChange = (e) => {
-    const descriptor = e.target.value;
-
-    if (descriptor === "dividendyieldoverall") {
-      setStocksByDividendYieldOverall();
-    } else if (descriptor === "dividendyieldcurrentyear") {
-      setStocksByDividendYieldCurrentYear();
-    }
-  };
 
   return (
     <div className={styles.container}>
       <div className={styles.header}>
         <h1 className={styles.heading}>Portfolio</h1>
-        <Select
-          options={getOptions()}
-          onChange={onSelectChange}
-          className={styles.select}
-        />
       </div>
 
       <div className={styles.listContainer}>
@@ -81,4 +36,4 @@ const StockList = ({ stocks, setStocks }) => {
   );
 };
 
-export default StockList;
+export default PortfolioList;

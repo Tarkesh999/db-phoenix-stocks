@@ -1,4 +1,51 @@
 const data = {
+  portfolio:[
+    {
+      name: "Twitter",
+      stockId: "122",
+      Qty: "4",
+      Invested: "1000",
+      Current:"1500",
+      PL: "+500",
+      DaysPL: "+23",
+      AvgPrice: "1200",
+      Sector: "Social Media"
+    },
+    {
+      name: "Twitter",
+      stockId: "122",
+      Qty: "4",
+      Invested: "1000",
+      Current:"1500",
+      PL: "+500",
+      DaysPL: "+23",
+      AvgPrice: "1200",
+      Sector: "Social Media"
+    },
+    {
+      name: "Twitter",
+      stockId: "122",
+      Qty: "4",
+      Invested: "1000",
+      Current:"1500",
+      PL: "+500",
+      DaysPL: "+23",
+      AvgPrice: "1200",
+      Sector: "Social Media"
+    },
+
+    {
+      name: "Apple",
+      stockId: "32",
+      Qty: "8",
+      Invested: "4000",
+      Current:"6000",
+      PL: "+2000",
+      DaysPL: "+200",
+      AvgPrice: "5500",
+      Sector: "Hardware"
+    }
+  ],
   exchanges: [
     {
       name: "OSEBX",
