@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.6d49620f.css",
-    "main.js": "/static/js/main.6755c4d5.js",
+    "main.css": "/static/css/main.c18a4399.css",
+    "main.js": "/static/js/main.48437735.js",
     "static/media/genie_lamp.png": "/static/media/genie_lamp.64a083fcd8d5782b73d9.png",
     "static/media/NeutrifPro-Medium.otf": "/static/media/NeutrifPro-Medium.e077da3cb9537c11c921.otf",
     "static/media/NeutrifPro-Regular.otf": "/static/media/NeutrifPro-Regular.9aac43a2029f3d69d782.otf",
@@ -17,11 +17,11 @@
     "static/media/flask.svg": "/static/media/flask.d65e7dc99c49617a1b15e0d68c676caf.svg",
     "static/media/chart-pie-alt.svg": "/static/media/chart-pie-alt.327b72aa2acaecda24bc2246e85a0370.svg",
     "static/media/chevron-down.svg": "/static/media/chevron-down.bc2137723848e2215404c0b69c468c7c.svg",
-    "main.6d49620f.css.map": "/static/css/main.6d49620f.css.map",
-    "main.6755c4d5.js.map": "/static/js/main.6755c4d5.js.map"
+    "main.c18a4399.css.map": "/static/css/main.c18a4399.css.map",
+    "main.48437735.js.map": "/static/js/main.48437735.js.map"
   },
   "entrypoints": [
-    "static/css/main.6d49620f.css",
-    "static/js/main.6755c4d5.js"
+    "static/css/main.c18a4399.css",
+    "static/js/main.48437735.js"
   ]
 }
