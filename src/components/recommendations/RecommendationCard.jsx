@@ -1,19 +1,21 @@
+import React, { useEffect, useState } from "react";
+
 import styles from "./Recommendations.module.css";
 import { Link } from "react-router-dom";
+import { ReactComponent as StockListIcon } from "../../assets/icons/chart-pie-alt.svg";
+import axios from "axios";
+import { getCurrentYear } from "../../helpers";
 
 
 const RecommendationCard = ({ recommendations }) => {
-
-  const stockClick = (stockId) => {
-  }
 
   const renderListItems = () => {
     return recommendations?.map((exchange) => {
       return (
         <div style={{overflowWrap:"break-word", marginBottom: 30}}>
         <li className={styles.listItem} key={exchange.stockId} style={{border:"1px solid black", borderRadius: "4px", padding: 4}}>
-          <div className={styles.name} onClick={stockClick(exchange.stockId)}>
-          <Link to={`/stock/${exchange.ticker}`} className={styles.link}>{exchange.stockName}</Link>
+          <div className={styles.name} onClick={() => console.log("stock clicked")}>
+          <Link to={`/`} className={styles.link}>{exchange.stockName}</Link>
           </div>
           <div className={styles.index}>{exchange.rank}</div>
           <span style={{whiteSpace:"pre-wrap",overflowWrap:"break-word"}}>
