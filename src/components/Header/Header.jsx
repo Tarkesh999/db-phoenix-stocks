@@ -10,11 +10,11 @@ const Header = () => {
       <div className={styles.container}>
         <Link to="/" className={styles.logoContainer}>
           <Logo className={styles.logo} />
-          <span>Nextock</span>
+          <span>NexStock</span>
         </Link>
 
         <div className={styles.userContainer}>
-          <div className={styles.user}>J</div>
+          <div className={styles.user}>G</div>
           <span>Gaurav</span>
         </div>
       </div>

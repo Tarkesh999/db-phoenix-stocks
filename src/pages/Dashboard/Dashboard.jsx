@@ -39,6 +39,7 @@ const Dashboard = ({ portfolio, exchanges, recommendations, stocks, setStocks })
         </Modal>
       </div>
       <Header />
+      <div style={{height:1}} />
       <Subheader>
         <ExchangeList exchanges={exchanges} />
         <TopFiveDividendStocksList stocks={getTopFiveDividendStocks(stocks)} />
