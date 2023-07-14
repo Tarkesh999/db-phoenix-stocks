@@ -14,6 +14,7 @@ function App() {
   const [recommendations, setRecommendations] = useState([]);
 
   const getData = () => {
+    var exchanges = data?.exchanges;
     axios({
       method: 'get',
       url: `https://stock-recommendation-4pctc4z25q-uc.a.run.app/getRecommendations`,
@@ -38,10 +39,12 @@ function App() {
       console.log("**********getUserPortfolio",res,res?.data);
       setUserPortfolio(res?.data);
     });
+    return {exchanges};
   };
 
   useEffect(() => {
-    getData();
+    const {exchanges} = getData();
+    setExchanges(exchanges);
   }, []);
 
   return (
